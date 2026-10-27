@@ -1,0 +1,156 @@
+/* Appointment intake: scoped to preserve the original website's other sections. */
+.clinic-brand { display: block; color: #164e47; font-size: 27px; font-weight: 700; line-height: 1.2; }
+.clinic-brand span { display: block; margin-top: 5px; font-size: 11px; font-weight: 500; letter-spacing: .4px; }
+#header .logo .clinic-brand { color: #164e47; }
+#header { background: #faf8f3; }
+#hero { background: #faf8f3; padding-top: 125px; }
+#hero:before { background: linear-gradient(120deg, #faf8f3, #e6eee3); }
+#hero .container { position: relative; }
+#hero .row { align-items: flex-start; }
+#hero h1 { color: #164e47; font-size: clamp(29px, 3vw, 43px); line-height: 1.25; }
+#hero .hero-eyebrow { font-size: 11px; letter-spacing: 1.7px; font-weight: 700; color: #47695d; margin-top: 25px; }
+#hero h2 { line-height: 1.6; }
+.hero-description { color: #4c605b; font-size: 16px; line-height: 1.85; margin: 20px 0 28px; }
+.btn-get-started { background: #164e47; }
+.booking-column { padding-bottom: 36px; }
+#booking { scroll-margin-top: 110px; }
+.booking-card { background: #fff; padding: 28px; border: 1px solid #dfe7dc; border-radius: 20px; box-shadow: 0 12px 40px #164e4710; color: #263d35; }
+.booking-card .booking-eyebrow { color: #527369; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 10px; }
+#hero .booking-card h2 { font-size: 25px; line-height: 1.25; color: #164e47; font-weight: 700; }
+.booking-intro { font-size: 14px; line-height: 1.6; color: #5b6d66; }
+.booking-card fieldset { min-width: 0; margin: 22px 0; padding: 0; border: 0; }
+.booking-card legend { float: none; width: auto; font-size: 12px; font-weight: 700; letter-spacing: .5px; color: #47695d; margin-bottom: 12px; }
+.booking-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.booking-grid > div { min-width: 0; }
+.booking-card label { display: block; font-size: 13px; font-weight: 600; margin-bottom: 6px; }
+.booking-card label > span:not(.pain-options span) { font-weight: 400; }
+.booking-card label span { font-size: inherit; }
+.booking-card input:not([type=radio]):not([type=checkbox]), .booking-card textarea { width: 100%; border: 1px solid #ccd8d0; border-radius: 8px; background: #fcfdfb; padding: 11px; color: #263d35; font: inherit; font-size: 14px; margin-bottom: 14px; }
+.booking-grid input { margin-bottom: 0 !important; }
+.booking-card textarea { resize: vertical; }
+.booking-card input::placeholder, .booking-card textarea::placeholder { color: #727e77; font-size: 12px; }
+.booking-card input:focus-visible, .booking-card textarea:focus-visible, .booking-card button:focus-visible, .booking-card a:focus-visible { outline: 3px solid #83ad9b; outline-offset: 3px; }
+.booking-card small { display: block; font-size: 11px; color: #66766d; margin-top: 4px; }
+.booking-card .pain-scale { margin-top: 0; }
+.pain-scale legend { letter-spacing: 0; font-size: 13px; color: #263d35; }
+.pain-options { display: flex; gap: 8px; }
+.pain-options label { flex: 1; position: relative; margin: 0; }
+.pain-options input { position: absolute; width: 1px; height: 1px; opacity: 0; }
+.pain-options span { display: block; text-align: center; border: 1px solid #ccd8d0; border-radius: 8px; padding: 9px 1px; font-size: 18px !important; cursor: pointer; }
+.pain-options input:checked + span { background: #164e47; color: #fff; border-color: #164e47; }
+.pain-options input:checked + span small { color: #fff; }
+.pain-options input:focus-visible + span { outline: 3px solid #83ad9b; outline-offset: 2px; }
+.booking-card .booking-consent { display: flex; align-items: flex-start; gap: 10px; margin: 18px 0; line-height: 1.6; font-size: 12px; }
+.booking-consent input { margin-top: 4px; width: 17px; height: 17px; flex-shrink: 0; accent-color: #164e47; }
+.booking-primary { width: 100%; background: #164e47; color: white; border: none; border-radius: 9px; padding: 14px; font-size: 14px; font-weight: 600; }
+.booking-primary:hover { background: #103e38; }
+.booking-card .booking-note { font-size: 11px; line-height: 1.6; color: #65746d; margin: 10px 0; }
+.booking-edit { width: 100%; background: transparent; border: 1px solid #ccd8d0; border-radius: 9px; padding: 11px; color: #164e47; margin-top: 10px; }
+.booking-card [hidden] { display: none !important; }
+#booking-summary { padding: 16px; background: #f4f7f0; border-radius: 10px; }
+#booking-summary dt { font-size: 11px; color: #527369; margin-top: 10px; }
+#booking-summary dt:first-child { margin-top: 0; }
+#booking-summary dd { font-size: 14px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.booking-call { color: #164e47; font-size: 12px; text-decoration: underline; }
+@media (max-width: 991px) {
+  #hero { padding-top: 90px; }
+  .booking-column { margin-top: 28px; }
+  #header .clinic-brand { font-size: 22px; }
+  .clinic-brand span { font-size: 9px; }
+}
+@media (max-width: 480px) {
+  .booking-card { padding: 20px 16px; }
+  .booking-grid { grid-template-columns: 1fr; }
+  .pain-options { gap: 5px; }
+  .pain-options small { font-size: 10px; }
+}
+
+/* Three compact booking panels, with saved answers when navigating back. */
+.booking-progress { display: flex; list-style: none; gap: 8px; margin: 20px 0 8px; padding: 0; }
+.booking-progress li { flex: 1; padding: 9px 5px; border-radius: 7px; background: #f0f3ee; color: #64766d; font-size: 12px; text-align: center; }
+.booking-progress li span { margin-left: 3px; }
+.booking-progress li[aria-current=step] { background: #164e47; color: #fff; font-weight: 600; }
+.booking-progress li.is-complete { background: #dfece1; color: #164e47; }
+.booking-navigation { display: flex; gap: 10px; margin-top: 12px; }
+.booking-navigation .booking-edit { flex: 0 0 90px; width: auto; margin-top: 0; }
+.booking-navigation .booking-primary { flex: 1; }
+.booking-card .booking-step { margin-top: 12px; margin-bottom: 12px; }
+.booking-step > legend:focus { outline: none; }
+.booking-step textarea { min-height: 60px; }
+#booking-review { max-height: 620px; overflow-y: auto; padding: 3px; }
+@media (max-width: 480px) {
+  .booking-progress li { font-size: 11px; }
+  .booking-progress li span { margin-left: 0; }
+}
+
+/* Shared booking popup for every appointment call to action. */
+button.btn-get-started { border: 0; cursor: pointer; }
+#hero { padding-bottom: 0; }
+#booking-dialog { width: min(600px, calc(100% - 28px)); max-height: calc(100dvh - 32px); padding: 0; border: 0; border-radius: 20px; background: #fff; color: #263d35; overflow-y: auto; overscroll-behavior: contain; }
+#booking-dialog::backdrop { background: rgba(14, 38, 32, .65); backdrop-filter: blur(4px); }
+#booking-dialog .booking-card { position: relative; border: 0; box-shadow: none; padding-top: 34px; }
+#booking-dialog .booking-card h2 { font-size: 25px; line-height: 1.3; font-weight: 700; color: #164e47; margin: 0 25px 12px 0; }
+#booking-dialog .booking-eyebrow { padding-right: 22px; }
+.booking-close { position: absolute; top: 10px; right: 12px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: #eff4ee; color: #164e47; font-size: 26px; line-height: 1; cursor: pointer; }
+.booking-close:focus-visible { outline: 3px solid #83ad9b; outline-offset: 2px; }
+body.booking-modal-open { overflow: hidden; }
+#booking-dialog #booking-review { max-height: none; overflow-y: visible; }
+@media (max-width: 480px) { #booking-dialog .booking-card { padding: 42px 18px 20px; } }
+
+/* One form is moved into the dialog and returned to the banner on close. */
+#booking-banner-host .booking-close { display: none; }
+.booking-google-review { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 20px; padding-top: 18px; border-top: 1px solid #e2e8e3; color: #374151; text-decoration: none; }
+.booking-google-review:hover { color: #164e47; }
+.review-google-word { font-family: Arial, sans-serif; font-size: 28px; font-weight: 600; letter-spacing: -1.5px; white-space: nowrap; }
+.review-google-word span:nth-child(1), .review-google-word span:nth-child(4) { color: #4285f4; }
+.review-google-word span:nth-child(2), .review-google-word span:nth-child(6) { color: #ea4335; }
+.review-google-word span:nth-child(3) { color: #fbbc05; }
+.review-google-word span:nth-child(5) { color: #34a853; }
+.review-rating { display: flex; flex-direction: column; gap: 2px; }
+.review-rating strong { font-size: 25px; line-height: 1.15; color: #374151; }
+.review-rating strong span { font-size: 12px; font-weight: 400; margin-left: 2px; color: #68746e; }
+.review-stars { position: relative; display: inline-block; width: max-content; font-size: 19px; line-height: 1.3; letter-spacing: 2px; color: #dce1dc; }
+.review-stars-filled { position: absolute; top: 0; left: 0; width: 90%; overflow: hidden; white-space: nowrap; color: #f5b301; }
+.review-count { font-size: 12px; text-align: right; }
+.booking-google-review .review-count small { font-size: 10px; margin-top: 5px; }
+@media (max-width: 380px) { .booking-google-review { gap: 8px; } .review-google-word { font-size: 24px; } .review-count { font-size: 10px; } }
+
+/* Consultation offer: hero, shared form, and final booking section. */
+.consult-offer { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; width: fit-content; padding: 11px 15px; margin: 18px 0 22px; border: 1px solid #c9dccd; border-radius: 12px; background: #edf5e9; color: #164e47; line-height: 1.4; }
+.consult-offer-label { font-size: 14px; font-weight: 600; }
+.consult-offer del { font-size: 19px; color: #717c75; text-decoration-thickness: 2px; }
+.consult-offer strong { padding: 4px 10px; border-radius: 6px; background: #164e47; color: #fff; font-size: 20px; font-weight: 800; letter-spacing: .5px; }
+.consult-offer--form { width: 100%; justify-content: center; gap: 9px; margin: 10px 0 14px; padding: 8px 10px; }
+.consult-offer--form .consult-offer-label { font-size: 13px; }
+.consult-offer--form del { font-size: 16px; }
+.consult-offer--form strong { font-size: 16px; padding: 3px 8px; }
+.consult-offer--appointment { margin: 18px 0; }
+@media (max-width: 380px) { .consult-offer { gap: 7px; padding: 9px; } .consult-offer-label { font-size: 12px; } }
+
+/* Mid-page offer banner, immediately before patient testimonials. */
+.consultation-banner { padding: 32px 0 54px; background: #faf8f3; scroll-margin-top: 90px; }
+.consultation-banner-card { display: grid; grid-template-columns: 1.2fr 1fr; overflow: hidden; border-radius: 24px; background: #164e47; box-shadow: 0 16px 35px #164e4712; }
+.consultation-banner-copy { position: relative; isolation: isolate; overflow: hidden; padding: 40px 44px; color: #fff; }
+.consultation-banner-copy::before, .consultation-banner-copy::after { content: ''; position: absolute; z-index: -1; width: 290px; height: 290px; border: 1px solid #ffffff18; border-radius: 50%; right: -155px; bottom: -140px; pointer-events: none; }
+.consultation-banner-copy::after { width: 390px; height: 390px; right: -205px; bottom: -190px; }
+.consultation-banner-eyebrow { margin: 0 0 18px; color: #ceddc9; font-size: 10px; letter-spacing: 1.8px; font-weight: 600; }
+.consultation-banner-copy h2 { font-family: Georgia, serif; font-size: clamp(30px, 3.2vw, 44px); font-weight: 400; line-height: 1.15; color: #fff; margin: 0 0 16px; }
+.consultation-banner-description { max-width: 420px; color: #e0e9e2; font-size: 14px; line-height: 1.75; margin-bottom: 18px; }
+.consult-offer--banner { color: #fff; background: #ffffff0d; border-color: #ffffff35; margin: 0 0 20px; padding: 10px 13px; }
+.consult-offer--banner del { color: #d3ded7; }
+.consult-offer--banner strong { background: #e0efc9; color: #164e47; }
+.consultation-banner-button { background: #fff; color: #164e47; border-radius: 9px; font-size: 13px; letter-spacing: 0; padding: 13px 20px; }
+.consultation-banner-button span { margin-left: 18px; }
+.consultation-banner-button:hover { background: #e0efc9; color: #164e47; }
+.consultation-banner-button:focus-visible { outline: 3px solid #e0efc9; outline-offset: 4px; }
+.consultation-banner-note { margin: 13px 0 0; font-size: 11px; color: #ceddc9; }
+.consultation-banner-photo { position: relative; min-height: 380px; }
+.consultation-banner-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 70% center; display: block; }
+.consultation-banner-photo::after { content: ''; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, #103d35a6); pointer-events: none; }
+.consultation-banner-caption { position: absolute; z-index: 1; bottom: 24px; left: 24px; right: 20px; color: #fff; font-family: Georgia, serif; font-size: 22px; }
+@media (max-width: 767px) {
+  .consultation-banner-card { grid-template-columns: 1fr; }
+  .consultation-banner-copy { padding: 30px 24px; }
+  .consultation-banner-photo { min-height: 0; height: 250px; }
+  .consultation-banner { padding: 24px 0 36px; }
+}

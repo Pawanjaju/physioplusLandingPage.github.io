@@ -71,7 +71,7 @@
       offset -= 20
     }
 
-    let elementPos = select(el).offsetTop
+    let elementPos = select(el).getBoundingClientRect().top + window.scrollY
     window.scrollTo({
       top: elementPos - offset,
       behavior: 'smooth'
@@ -242,7 +242,7 @@
   const getReply = (message) => {
     const text = message.toLowerCase()
     if (text.includes('appointment') || text.includes('book') || text.includes('booking')) {
-      return 'You can book an appointment from the Book Your Appointment buttons, or share your name and preferred time and we will follow up.'
+      return 'Use the Book Your Appointment button to complete the booking form. Review your details, then send your request to the clinic through WhatsApp. This automated chat does not send messages to the clinic.'
     }
     if (text.includes('price') || text.includes('pricing') || text.includes('cost') || text.includes('fee')) {
       return 'Pricing can vary by condition and session type. Share your concern and we can guide you to the right plan.'

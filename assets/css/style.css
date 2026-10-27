@@ -549,7 +549,7 @@ section {
 }
 
 .section-bg {
-  background-color: #f5f5ff;
+  background-color: #faf8f3;
 }
 
 .section-title {
@@ -806,7 +806,7 @@ section {
   display: flex;
   align-items: center;
   padding: 20px;
-  background: #f5f5ff;
+  background: #faf8f3;
   transition: ease-in-out 0.3s;
 }
 .features .icon-box i {
@@ -836,7 +836,7 @@ section {
 # Counts
 --------------------------------------------------------------*/
 .counts {
-  background: #f5f5ff;
+  background: #faf8f3;
   padding: 70px 0 60px;
 }
 .counts .count-box {
@@ -879,6 +879,10 @@ section {
 /*--------------------------------------------------------------
 # Details
 --------------------------------------------------------------*/
+.details {
+  padding: 60px 0;
+  background: #faf8f3;
+} 
 .details .content + .content {
   margin-top: 100px;
 }
@@ -1018,7 +1022,8 @@ section {
 # Team
 --------------------------------------------------------------*/
 .team {
-  background: #f5f5ff;
+  /* background: #faf8f3; */
+  background: #fff;
   padding: 70px 0 60px;
 }
 .team .member {

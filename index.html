@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Physioplus Rehablitation Center </title>
-  <meta content="" name="description">
+  <title>Physioplus – Advanced Physiotherapy Center</title>
+  <meta content="Personalised online physiotherapy and rehabilitation with Physioplus. Request a consultation with Dr. Swapnali Bajaj." name="description">
   <meta content="" name="keywords">
 
   <!-- Favicons -->
@@ -29,6 +29,7 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/booking.css" rel="stylesheet">
 
   <!-- =======================================================
   * Template Name: Bootslander - v4.7.0
@@ -45,7 +46,7 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <img src="assets/img/logo.png" alt="PhysioPlus Logo">
+        <a class="clinic-brand" href="#hero">Physioplus<span>Advanced Physiotherapy Center</span></a>
 
         <!-- Uncomment below if you prefer to use an image logo -->
         <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
@@ -54,18 +55,15 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">About</a></li>
-          <li><a class="nav-link scrollto" href="#features">Features</a></li>
-          <li><a class="nav-link scrollto" href="#gallery">Gallery</a></li>
-          <li><a class="nav-link scrollto" href="#team">Team</a></li>
-          <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
+          <li><a class="nav-link scrollto" href="#details">About</a></li>
 
+          <li><a class="nav-link scrollto" href="#faq">FAQs</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
       <div class="text-center text-lg-start disp-desktop">
-        <a href="#about" class="btn-get-started scrollto">Book Your Appointment</a>
+        <button type="button" class="btn-get-started" data-booking-open aria-haspopup="dialog" aria-controls="booking-dialog">Book Your Appointment</button>
       </div>
     </div>
   </header><!-- End Header -->
@@ -75,19 +73,96 @@
 
     <div class="container">
       <div class="row justify-content-between">
-        <div class="col-lg-7 pt-5 pt-lg-0 order-2 order-lg-1 d-flex align-items-center">
+        <div class="col-lg-5 pt-5 pt-lg-0 d-flex align-items-center">
           <div data-aos="zoom-out">
-            <h1>Say Goodbye to Pain— Without Leaving Your<span> Home!</span></h1>
+            <p class="hero-eyebrow">PERSONALISED CARE, WHEREVER YOU ARE</p>
+            <h1>Expert Physiotherapy &amp; Rehabilitation — Right from the Comfort of Your Home.</h1>
+            <p class="consult-offer consult-offer--hero"><span class="consult-offer-label">Physiotherapy consult</span> <del aria-label="Previously 499 rupees">₹499</del> <strong>FREE</strong></p>
             <!-- <h2>At Physioplus, we don’t just treat your symptoms—we help you fix the root cause so you can feel stronger, move better, and get back to life.</h2> -->
-            <h2>Struggling with pain, stiffness, or limited mobility? Get expert physiotherapy consultations from
-              certified professionals—all online, all on your schedule.</h2>
+            <h2>Struggling with pain, stiffness, postural issues, or limited mobility?</h2>
+            <p class="hero-description">Get a personalised online physiotherapy consultation from certified professionals, guided treatment plans, and live one-on-one sessions with an experienced physiotherapist—all online, all on your schedule.</p>
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto">Book Your Appointment</a>
+              <button type="button" class="btn-get-started" data-booking-open aria-haspopup="dialog" aria-controls="booking-dialog">Book Your Appointment</button>
             </div>
           </div>
         </div>
-        <div class="col-lg-4 order-1 order-lg-2 hero-img" data-aos="zoom-out" data-aos-delay="300">
-          <img src="assets/img/hero-img.png" class="img-fluid animated" alt="">
+        <div class="col-lg-6 booking-column" id="booking-banner-host">
+          <section id="booking" class="booking-card" aria-labelledby="booking-title">
+            <button type="button" class="booking-close" id="booking-close" aria-label="Close appointment form">&times;</button>
+            <p class="booking-eyebrow">LET’S UNDERSTAND YOUR NEEDS</p>
+            <h2 id="booking-title">Request an online appointment</h2>
+            <p class="consult-offer consult-offer--form"><span class="consult-offer-label">Physiotherapy consult</span> <del aria-label="Previously 499 rupees">₹499</del> <strong>FREE</strong></p>
+            <p class="booking-intro">Tell us a little about yourself and your pain. Our clinic will confirm availability with you.</p>
+            <form id="booking-form">
+              <ol class="booking-progress" aria-label="Booking progress">
+                <li aria-current="step">1 <span>About you</span></li>
+                <li>2 <span>Pain details</span></li>
+                <li>3 <span>Preferences</span></li>
+              </ol>
+              <div class="d-flex justify-content-between"><p id="booking-step-status" class="booking-note" role="status">Step 1 of 3 · About you</p>
+              <p class="booking-note">Fields marked * are required.</p></div>
+              <fieldset class="booking-step" id="booking-step-1">
+                <!-- <legend tabindex="-1">About you</legend> -->
+                <div class="booking-grid">
+                  <div><label for="booking-name">Full name *</label><input id="booking-name" name="name" autocomplete="name" maxlength="100" required></div>
+                  <div><label for="booking-age">Age (years) *</label><input id="booking-age" name="age" type="number" min="1" max="120" step="1" inputmode="numeric" required></div>
+                  <div><label for="booking-phone">Contact number *</label><input id="booking-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" maxlength="22" pattern="[+0-9() .-]{10,22}" aria-describedby="phone-help" required><small id="phone-help">Include country code if outside India.</small></div>
+                  <div><label for="booking-occupation">Occupation <span>(optional)</span></label><input id="booking-occupation" name="occupation" maxlength="100" placeholder="e.g. desk work, homemaker, retired"></div>
+                </div>
+              </fieldset>
+              <fieldset class="booking-step" id="booking-step-2" hidden>
+                <!-- <legend tabindex="-1">Your pain &amp; movement</legend> -->
+                <label for="booking-problem">What problem are you facing? *</label>
+                <textarea id="booking-problem" name="problem" rows="2" maxlength="1000" placeholder="Tell us about your pain or difficulty moving." required></textarea>
+                <label for="booking-location">Where do you feel the pain? *</label>
+                <input id="booking-location" name="location" maxlength="160" placeholder="e.g. lower back, right knee, neck" required>
+                <fieldset class="pain-scale">
+                  <legend>On a scale of 1–5, what is the intensity of your pain? *</legend>
+                  <div class="pain-options">
+                    <label><input type="radio" name="pain" value="1" required><span>1<small>Mild</small></span></label>
+                    <label><input type="radio" name="pain" value="2"><span>2<small>Low</small></span></label>
+                    <label><input type="radio" name="pain" value="3"><span>3<small>Moderate</small></span></label>
+                    <label><input type="radio" name="pain" value="4"><span>4<small>High</small></span></label>
+                    <label><input type="radio" name="pain" value="5"><span>5<small>Worst</small></span></label>
+                  </div>
+                </fieldset>
+                <label for="booking-onset">When did you first experience this pain? *</label>
+                <input id="booking-onset" name="onset" maxlength="160" placeholder="e.g. 3 days ago, around June, after an injury" required>
+              </fieldset>
+              <fieldset class="booking-step" id="booking-step-3" hidden>
+                <!-- <legend tabindex="-1">Additional details &amp; preferences</legend> -->
+                <label for="booking-triggers">What makes it better or worse? <span>(optional)</span></label>
+                <textarea id="booking-triggers" name="triggers" rows="2" maxlength="600" placeholder="e.g. worse after sitting; better with rest. Does it affect sleep or daily activities?"></textarea>
+                <label for="booking-history">Any related injury, surgery, or treatment? <span>(optional)</span></label>
+                <textarea id="booking-history" name="history" rows="2" maxlength="600" placeholder="Share relevant details, if any."></textarea>
+                <label for="booking-time">Preferred day &amp; time <span>(optional)</span></label>
+                <input id="booking-time" name="time" maxlength="160" placeholder="e.g. weekdays after 6 pm (India time)">
+              <label class="booking-consent"><input type="checkbox" id="booking-consent" required><span>I agree to share these contact and health details with Physioplus at +91 74475 54567 via WhatsApp to request an appointment.</span></label>
+              </fieldset>
+              <div class="booking-navigation">
+                <button type="button" class="booking-edit" id="booking-back" hidden>← Back</button>
+                <button type="submit" class="booking-primary" id="booking-next" disabled>Next: Pain details →</button>
+              </div>
+              
+            </form>
+            <div id="booking-review" hidden aria-labelledby="booking-review-title">
+              <h3 id="booking-review-title" tabindex="-1">Review your request</h3>
+              <p>Check your details before sharing them with the clinic.</p>
+              <dl id="booking-summary"></dl>
+              <button type="button" class="booking-primary" id="booking-whatsapp">Continue to WhatsApp</button>
+              <button type="button" class="booking-edit" id="booking-edit">Edit my answers</button>
+              <p class="booking-note" id="booking-status" role="status">WhatsApp will open with your request prepared. Tap Send there to share it. Your appointment is only confirmed when the clinic replies.</p>
+              <a class="booking-call" href="tel:+917447554567">Trouble opening WhatsApp? Call +91 74475 54567</a>
+            </div>
+            <noscript>Please enable JavaScript to prepare your booking request, or call <a href="tel:+917447554567">+91 74475 54567</a>.</noscript>
+          
+            <a class="booking-google-review" href="https://www.google.com/search?q=advanced+physiotherapy+clinic+-+physioplus+solapur+reviews" target="_blank" rel="noopener noreferrer" aria-label="Read Physioplus reviews on Google: 4.8 out of 5 from 197 reviews, checked 25 October 2026">
+              <span class="review-google-word" aria-label="Google"><span>G</span><span>o</span><span>o</span><span>g</span><span>l</span><span>e</span></span>
+              <span class="review-rating"><strong>4.8<span>/5</span></strong><span class="review-stars" role="img" aria-label="4.8 out of 5 stars"><span aria-hidden="true">★★★★★</span><span class="review-stars-filled" aria-hidden="true">★★★★★</span></span></span>
+              <span class="review-count">197 Google reviews <span aria-hidden="true">↗</span><small>Checked 25 Oct 2026</small></span>
+            </a>
+
+          </section>
         </div>
       </div>
     </div>
@@ -110,50 +185,10 @@
 
   </section><!-- End Hero -->
 
+  <dialog id="booking-dialog" aria-labelledby="booking-title"></dialog>
+
   <div id="main">
 
-    <section id="details" class="details">
-      <div class="container-fluid">
-
-        <div class="row content">
-          <div class="col-md-5" data-aos="fade-right">
-            <img src="assets/img/about-doc.png" class="img-fluid" alt="">
-          </div>
-          <div class="col-md-7 pt-4 mr-3" data-aos="fade-up">
-            <div class="section-title" data-aos="fade-up">
-              <h2>About</h2>
-              <p> Dr. Swapnali Bajaj
-                <span>MPT (Ortho), Certified in Dry Needling & Tele-Rehab</span>
-              </p>
-            </div>
-            <h3>Meet Dr. Swapnali Bajaj: Your Guide to a Stronger, Pain-Free Life—From Anywhere</h3>
-            <p class="fst-italic">
-              Dr. Swapnali Bajaj isn't just a qualified physiotherapist—she's someone who really gets it. With over 10
-              years of experience treating people with chronic pain, movement issues, sports injuries, and poor posture,
-              she's helped hundreds of individuals regain their strength, confidence, and independence.</p>
-
-            <p>She holds a Master's in Orthopedic Physiotherapy (MPT Ortho) and is certified in advanced techniques like
-              Dry Needling and Tele-Rehabilitation. But more than her credentials, what sets her apart is how she treats
-              you.
-            </p>
-            <p>Whether you're visiting her at the clinic or connecting online from the comfort of your home, Dr. Bajaj
-              takes the time to listen carefully, understand what you're going through, and explain everything in
-              simple, clear language. No complicated medical talk—just real advice that makes sense and works.</p>
-            <!-- <p>During online sessions, she'll:</p>
-             <ul>
-              <li><i class="bi bi-check"></i> Watch how you move over video (yes, this works amazingly well!)</li>
-              <li><i class="bi bi-check"></i> Help you understand what's causing your pain</li>
-              <li><i class="bi bi-check"></i> Teach you simple, safe exercises you can do at home—using things you already have (like a chair or towel)</li>
-              <li><i class="bi bi-check"></i> Give you real-time feedback so you know you're doing things right</li>
-              <li><i class="bi bi-check"></i> Answer your questions, adjust your plan, and keep you motivated every step of the way</li>
-            </ul> -->
-            <!-- <p>
-              Voluptas nisi in quia excepturi nihil voluptas nam et ut. Expedita omnis eum consequatur non. Sed in asperiores aut repellendus. Error quisquam ab maiores. Quibusdam sit in officia
-            </p> -->
-          </div>
-        </div>
-      </div>
-      </section>
       <section id="" class="team">
       <div class="container">
           <div class="section-title pb-2" data-aos="fade-up">
@@ -213,6 +248,48 @@
       </div>
     </section><!-- End Details Section -->
 
+    <section id="details" class="details">
+      <div class="container-fluid">
+
+        <div class="row content">
+          <div class="col-md-5" data-aos="fade-right">
+            <img src="assets/img/about-doc.png" class="img-fluid" alt="Dr. Swapnali Bajaj, physiotherapist at Physioplus" loading="lazy">
+          </div>
+          <div class="col-md-7 pt-4" data-aos="fade-up">
+            <div class="section-title" data-aos="fade-up">
+              <h2>About</h2>
+              <p> Dr. Swapnali Bajaj
+                <span>MPT (Ortho), Certified in Dry Needling & Tele-Rehab</span>
+              </p>
+            </div>
+            <h3>Meet Dr. Swapnali Bajaj: Your Guide to a Stronger, Pain-Free Life—From Anywhere</h3>
+            <p class="fst-italic">
+              Dr. Swapnali Bajaj isn't just a qualified physiotherapist—she's someone who really gets it. With over 10
+              years of experience treating people with chronic pain, movement issues, sports injuries, and poor posture,
+              she's helped hundreds of individuals regain their strength, confidence, and independence.</p>
+
+            <p>She holds a Master's in Orthopedic Physiotherapy (MPT Ortho) and is certified in advanced techniques like
+              Dry Needling and Tele-Rehabilitation. But more than her credentials, what sets her apart is how she treats
+              you.
+            </p>
+            <p>Whether you're visiting her at the clinic or connecting online from the comfort of your home, Dr. Bajaj
+              takes the time to listen carefully, understand what you're going through, and explain everything in
+              simple, clear language. No complicated medical talk—just real advice that makes sense and works.</p>
+            <!-- <p>During online sessions, she'll:</p>
+             <ul>
+              <li><i class="bi bi-check"></i> Watch how you move over video (yes, this works amazingly well!)</li>
+              <li><i class="bi bi-check"></i> Help you understand what's causing your pain</li>
+              <li><i class="bi bi-check"></i> Teach you simple, safe exercises you can do at home—using things you already have (like a chair or towel)</li>
+              <li><i class="bi bi-check"></i> Give you real-time feedback so you know you're doing things right</li>
+              <li><i class="bi bi-check"></i> Answer your questions, adjust your plan, and keep you motivated every step of the way</li>
+            </ul> -->
+            <!-- <p>
+              Voluptas nisi in quia excepturi nihil voluptas nam et ut. Expedita omnis eum consequatur non. Sed in asperiores aut repellendus. Error quisquam ab maiores. Quibusdam sit in officia
+            </p> -->
+          </div>
+        </div>
+      </div>
+      </section>
     <!-- ======= Counts Section ======= --
     <section id="counts" class="counts">
       <div class="container">
@@ -317,6 +394,26 @@
     </section><!-- End About Section -->
 
 
+    <!-- ======= Mid-page consultation offer ======= -->
+    <section id="consultation-banner" class="consultation-banner" aria-labelledby="consultation-banner-title">
+      <div class="container">
+        <div class="consultation-banner-card">
+          <div class="consultation-banner-copy">
+            <p class="consultation-banner-eyebrow">YOUR FIRST STEP TO MOVING BETTER</p>
+            <h2 id="consultation-banner-title">A little guidance.<br>A stronger tomorrow.</h2>
+            <p class="consultation-banner-description">Connect with a physiotherapist from the comfort of your home. Let’s understand your pain and plan your next step.</p>
+            <p class="consult-offer consult-offer--banner"><span class="consult-offer-label">Physiotherapy consult</span> <del aria-label="Previously 499 rupees">₹499</del> <strong>FREE</strong></p>
+            <button type="button" class="btn-get-started consultation-banner-button" data-booking-open aria-haspopup="dialog" aria-controls="booking-dialog">Book Your Appointment <span aria-hidden="true">↗</span></button>
+            <p class="consultation-banner-note">Online consultation · Personalised care</p>
+          </div>
+          <div class="consultation-banner-photo">
+            <img src="assets/img/retired-person-doing-sports-home-watching-online-workout.jpg" alt="An older adult following an online guided exercise session at home" loading="lazy" width="5197" height="3543">
+            <span class="consultation-banner-caption">Care that fits into your life.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- ======= Testimonials Section ======= -->
     <section id="testimonials" class="testimonials">
       <div class="container">
@@ -380,6 +477,7 @@ Thank you Madam
          
           <div class="col-md-7 col-12 pt-4 icon-box order-1" data-aos="fade-up">
             <h3>Start Feeling Better—Book Your Doctor's Appointment Today</h3>
+            <p class="consult-offer consult-offer--appointment"><span class="consult-offer-label">Physiotherapy consult</span> <del aria-label="Previously 499 rupees">₹499</del> <strong>FREE</strong></p>
             <p>
               Don’t let pain control your routine or keep you from doing the things you love. Whether you're near Solapur or miles away, Dr. Swapnali Bajaj is ready to guide you with expert care—online or in person. Your first consultation is completely free, so there’s no risk in starting.
 
@@ -389,7 +487,7 @@ Thank you Madam
               Let’s take the first step toward a stronger, pain-free you.
             </p>
             <div class="text-center text-lg-start">
-        <a href="#about" class="btn-get-started scrollto">Book Your Appointment</a>
+        <button type="button" class="btn-get-started" data-booking-open aria-haspopup="dialog" aria-controls="booking-dialog">Book Your Appointment</button>
       </div>
           </div>
            <div class="col-md-5 col-12 order-2" data-aos="fade-right">
@@ -664,6 +762,7 @@ Thank you Madam
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script src="assets/js/booking.js"></script>
 
 </body>
 
