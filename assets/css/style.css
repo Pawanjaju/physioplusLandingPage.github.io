@@ -582,12 +582,24 @@ section {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #164e47;
+  display: block;
 }
 .section-title p span{
   font-size: 12px;
   line-height: 13px;
   color: rgba(0, 0, 0, 0.6);
   font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .section-title p {
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+  }
+  .section-title{
+    margin-bottom: 20px;
+  }
 }
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -927,6 +939,12 @@ section {
 }
 .appointments p{
 
+}
+
+@media (max-width: 767px) {
+ .appointments {
+  padding: 20px 10px;
+  }
 }
 /*--------------------------------------------------------------
 # Testimonials
