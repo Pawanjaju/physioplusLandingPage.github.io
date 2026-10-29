@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
   color: #444444;
 }
 
@@ -581,7 +581,7 @@ section {
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: #010483;
+  color: #164e47;
 }
 .section-title p span{
   font-size: 12px;
@@ -657,7 +657,7 @@ section {
 .about .icon-boxes h3 {
   font-size: 28px;
   font-weight: 700;
-  color: #010483;
+  color: #164e47;
   text-transform: capitalize;
   margin-bottom: 15px;
 }
@@ -822,7 +822,7 @@ section {
   font-size: 16px;
 }
 .features .icon-box h3 a {
-  color: #010483;
+  color: #164e47;
   transition: ease-in-out 0.3s;
 }
 .features .icon-box h3 a:hover {
@@ -867,7 +867,7 @@ section {
   font-size: 36px;
   display: block;
   font-weight: 600;
-  color: #010483;
+  color: #164e47;
 }
 .counts .count-box p {
   padding: 0;
@@ -889,7 +889,7 @@ section {
 .details .content h3 {
   font-weight: 600;
   font-size: 18px;
-  color: #010483;
+  color: #164e47;
 }
 .details .content ul {
   list-style: none;
@@ -921,7 +921,7 @@ section {
 .appointments h3{
   font-size: 28px;
     font-weight: 700;
-    color: #010483;
+    color: #164e47;
     text-transform: capitalize;
     margin-bottom: 25px;
 }
@@ -1279,7 +1279,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   margin-bottom: 5px;
-  color: #010483;
+  color: #164e47;
 }
 .contact .info p {
   padding: 0 0 0 60px;

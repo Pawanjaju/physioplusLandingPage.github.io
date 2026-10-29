@@ -59,7 +59,12 @@
     back.hidden = step === 0;
     next.textContent = ['Next: Pain details →', 'Next: Preferences →', 'Review appointment request →'][step];
     document.getElementById('booking-step-status').textContent = `Step ${step + 1} of 3 · ${titles[step]}`;
-    if (focus) steps[step].querySelector('legend').focus();
+    if (focus) {
+      // A step heading is optional; do not target nested pain-scale legends.
+      const target = steps[step].querySelector(':scope > legend[tabindex]')
+        || steps[step].querySelector('input, textarea');
+      target?.focus();
+    }
   };
   const validateStep = (index) => {
     const inputs = [...steps[index].querySelectorAll('input, textarea')];

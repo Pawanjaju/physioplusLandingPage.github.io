@@ -154,3 +154,75 @@ body.booking-modal-open { overflow: hidden; }
   .consultation-banner-photo { min-height: 0; height: 250px; }
   .consultation-banner { padding: 24px 0 36px; }
 }
+
+/* Illustrated six-step virtual physiotherapy journey. */
+.care-journey { padding: 70px 0 60px; background: #fff; }
+.care-journey-heading { display: flex; justify-content: space-between; align-items: flex-end; gap: 30px; margin-bottom: 32px; }
+.care-journey-eyebrow { font-size: 11px; font-weight: 700; letter-spacing: 2px; color: #63806b; margin-bottom: 14px; }
+.care-journey-heading h2 { color: #164e47; font-size: clamp(28px, 3vw, 42px); line-height: 1.22; font-weight: 700; margin: 0; letter-spacing: -1px; }
+.care-journey-heading h2 span { color: #6b8270; font-weight: 400; }
+.care-journey-heading > p { max-width: 340px; color: #627168; font-size: 14px; line-height: 1.8; margin: 0 0 3px; }
+.care-journey-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; list-style: none; padding: 0; margin: 0; }
+.care-step { overflow: hidden; border: 1px solid #e1e8dc; border-radius: 18px; background: #fff; }
+.care-step-art { position: relative; width: 100%; aspect-ratio: 1; background-image: url('../img/care-journey-realistic.png'); background-size: 300% 200%; background-repeat: no-repeat; background-color: #f7f8f2; }
+.care-step-art-1 { background-position: 0 0; }
+.care-step-art-2 { background-position: 50% 0; }
+.care-step-art-3 { background-position: 100% 0; }
+.care-step-art-4 { background-position: 0 100%; }
+.care-step-art-5 { background-position: 50% 100%; }
+.care-step-art-6 { background-position: 100% 100%; }
+.care-step-number { position: absolute; top: 16px; left: 16px; display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; background: #164e47; color: #fff; font-size: 12px; font-weight: 700; box-shadow: 0 3px 9px #164e4715; }
+.care-step-copy { padding: 22px 23px 25px; }
+.care-step-copy .care-step-label { font-size: 10px; font-weight: 700; letter-spacing: 1.8px; color: #68836b; margin: 0 0 9px; }
+.care-step h3 { color: #164e47; font-size: 18px; font-weight: 700; line-height: 1.4; margin: 0 0 10px; }
+.care-step-copy > p:last-child { color: #627168; font-size: 13px; line-height: 1.8; margin: 0; }
+.care-journey-footer { display: flex; align-items: center; justify-content: space-between; gap: 20px; padding: 23px 28px; margin-top: 28px; background: #edf3e9; border-radius: 14px; }
+.care-journey-footer p { color: #164e47; font-size: 16px; margin: 0; }
+.care-journey-footer button { font-size: 13px; letter-spacing: 0; border-radius: 8px; }
+.care-journey-footer button span { margin-left: 12px; }
+@media (max-width: 991px) { .care-journey-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } .care-journey-heading { align-items: flex-start; flex-direction: column; gap: 18px; } .care-journey-heading > p { max-width: 540px; } }
+@media (max-width: 575px) { .care-journey { padding: 42px 0; } .care-journey-grid { grid-template-columns: 1fr; gap: 20px; } .care-journey-footer { flex-direction: column; align-items: flex-start; padding: 22px; } }
+
+/* Section-specific booking invitations: buttons only, no offer badges. */
+.section-booking-action { display: flex; justify-content: center; margin-top: 30px; padding: 0 0 8px; }
+.section-booking-button { display: inline-flex; align-items: center; justify-content: center; gap: 16px; max-width: 100%; padding: 13px 23px; border: 1px solid #164e47; border-radius: 9px; background: #164e47; color: #fff; font-family: 'Montserrat', sans-serif; font-size: 14px; font-weight: 600; line-height: 1.5; text-align: center; cursor: pointer; transition: background .2s, box-shadow .2s; }
+.section-booking-button span { flex-shrink: 0; }
+.section-booking-button:hover { background: #103e38; box-shadow: 0 5px 15px #164e471c; }
+.section-booking-button--outline { background: transparent; color: #164e47; }
+.section-booking-button--outline:hover { background: #edf3e9; }
+.section-booking-button--light { background: #fff; border-color: #fff; color: #164e47; }
+.section-booking-button--light:hover { background: #edf3e9; }
+.section-booking-button:focus-visible { outline: 3px solid #99c02d; outline-offset: 4px; }
+@media (max-width: 575px) { .section-booking-button { font-size: 13px; gap: 10px; padding: 13px 17px; } .section-booking-action { margin-top: 24px; } }
+
+.testimonials .section-booking-action { position: relative; z-index: 1; }
+
+/* Clinic footer: quote, booking invitation, and practical contact details. */
+.clinic-footer { padding: 54px 0 0; background: #123f39; color: #e6eee5; scroll-margin-top: 70px; }
+.footer-invitation { position: relative; display: flex; justify-content: space-between; align-items: center; gap: 45px; padding-bottom: 40px; border-bottom: 1px solid #ffffff26; }
+.footer-eyebrow { font-size: 10px; letter-spacing: 2px; color: #cedcb5; font-weight: 600; margin: 0 0 16px; }
+.footer-invitation h2 { font-family: Georgia, serif; font-size: clamp(28px, 3.2vw, 42px); font-weight: 400; color: #fff; line-height: 1.2; margin-bottom: 16px; }
+.footer-invitation h2 span { color: #cedcb5; }
+.footer-invitation > div > p:last-child { max-width: 560px; font-size: 13px; line-height: 1.8; color: #d0ddd5; margin-bottom: 0; }
+.footer-invitation button { flex-shrink: 0; }
+.footer-columns { display: grid; grid-template-columns: 1.2fr 1fr 1fr; gap: 50px; padding: 40px 0; }
+.footer-brand img { width: 245px; max-width: 100%; height: auto; padding: 10px 12px; background: #fff; border-radius: 8px; }
+.footer-brand p { font-size: 13px; color: #ccdad1; line-height: 1.8; margin: 18px 0 0; }
+.clinic-footer h3 { font-size: 14px; color: #fff; font-weight: 600; margin-bottom: 18px; }
+.clinic-footer address { font-size: 13px; line-height: 1.9; color: #d0ddd5; margin-bottom: 12px; }
+.clinic-footer a { color: #e6eee5; }
+.clinic-footer .footer-text-link { color: #cedcb5; font-size: 12px; }
+.footer-text-link span { margin-left: 7px; }
+.clinic-footer .footer-phone { font-size: 19px; font-weight: 600; color: #fff; }
+.footer-connect > p { font-size: 12px; color: #ccdad1; margin: 10px 0 18px; }
+.footer-socials { display: flex; flex-wrap: wrap; gap: 9px; }
+.footer-socials a { display: inline-flex; align-items: center; gap: 7px; padding: 8px 10px; font-size: 11px; border: 1px solid #ffffff36; border-radius: 7px; }
+.footer-socials i { font-size: 15px; }
+.clinic-footer a:hover { color: #d7edb7; }
+.footer-socials a:hover { background: #ffffff10; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid #ffffff26; padding: 20px 0 26px; font-size: 11px; color: #bacdc1; }
+.footer-bottom p { margin: 0; }
+.footer-bottom a { color: #bacdc1; }
+.clinic-footer a:focus-visible { outline: 3px solid #cedcb5; outline-offset: 4px; }
+@media (max-width: 991px) { .footer-invitation { align-items: flex-start; flex-direction: column; gap: 24px; } .footer-columns { gap: 28px; } }
+@media (max-width: 767px) { .clinic-footer { padding-top: 36px; } .footer-columns { grid-template-columns: 1fr; gap: 28px; padding: 30px 0; } .footer-bottom { flex-direction: column; gap: 12px; padding-bottom: 85px; } }
